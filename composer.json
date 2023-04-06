@@ -1,0 +1,14 @@
+{
+    "name": "financial-edge/simplesamlphp-module-wordpressauth",
+    "description": "Adds Wordpress authentication to simplesamlphp",
+    "type": "simplesamlphp-module",
+    "require": {
+        "simplesamlphp/composer-module-installer": "^1.3"
+    },
+    "authors": [
+        {
+            "name": "Joshua Sullivan-Small",
+            "email": "joshua.sullivansmall@fe.training"
+        }
+    ]
+}
