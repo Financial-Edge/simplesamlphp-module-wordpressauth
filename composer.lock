@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c2deee00435f2fc082847acb5ced3771",
+    "content-hash": "a0f39f889d4d2a45ae65f9fc10f938b2",
     "packages": [
         {
             "name": "simplesamlphp/assert",
@@ -156,7 +156,10 @@
     "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "php": ">=7.4",
+        "ext-pdo": "*"
+    },
     "platform-dev": [],
     "plugin-api-version": "1.1.0"
 }
