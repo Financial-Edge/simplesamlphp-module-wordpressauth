@@ -86,17 +86,16 @@ class WordpressAuth extends UserPassBase
         Logger::warning("UID '$email' username '$username' email '$email'");
 
         /* Create the attribute array of the user. */
-        $attributes = array(
-            'uid' => array($email),
-            'username' => array($username),
-            'name' => array($row['display_name']),
-            'display_name' => array($row['display_name']),
-            'email' => array($email),
-            'first_name' => array($first_name),
-            'last_name' => array($last_name),
-            'capabilities' => array($capabilities)
-        );
-
-        return $attributes;
+        return [
+            'wordpress_id' => [$row['ID']],
+            'uid' => [$email],
+            'username' => [$username],
+            'name' => [$row['display_name']],
+            'display_name' => [$row['display_name']],
+            'email' => [$email],
+            'first_name' => [$first_name],
+            'last_name' => [$last_name],
+            'capabilities' => [$capabilities]
+        ];
     }
 }
