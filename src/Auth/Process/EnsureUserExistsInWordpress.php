@@ -63,7 +63,7 @@ class EnsureUserExistsInWordpress extends ProcessingFilter
 
         $this->setMetaData($id, 'nickname', $data['display_name']);
         $this->setMetaData($id, $this->db->getPrefix() . 'capabilities', 'a:1:{s:10:"subscriber";b:1;}');
-        $this->setMetaData($id, 'user_created_by', sprintf('FE SSO (%s)', $state['saml:sp:IdP'] ?? '?'));
+        $this->setMetaData($id, 'user_created_by', sprintf('FE SSO (%s)', $state['saml:sp:IdP'] ?? $state['authouath2:AuthId'] ?? '?'));
         $this->setMetaDataIfValueIsNotEmpty($id, 'first_name', $attributes['first_name'][0] ?? null);
         $this->setMetaDataIfValueIsNotEmpty($id, 'last_name', $attributes['last_name'][0] ?? null);
     }
